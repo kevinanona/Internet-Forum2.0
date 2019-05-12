@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
-<link rel="stylesheet" type="text/css" href="../OldStylesheet/stylesheet.css">
+<link rel="stylesheet" type="text/css" href="/OldStylesheet/stylesheet.css">
 <SCRIPT type="text/javascript"src="https://gc.kis.v2.scr.kaspersky-labs.com/F9A769DF-F758-B045-8B15-7B836D5190F2/main.js" charset="UTF-8"></script>
 <SCRIPT>
     /** These functions arent being used anymore
