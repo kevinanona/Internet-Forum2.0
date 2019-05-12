@@ -3,7 +3,8 @@
 <head>
     <title>Internet Forum</title>
     <!-- THIS PAGE IS TO BE INCLUDED INTO EVERY FILE THE USER IS GOING TO BE LOGGED IN FOR -->
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/OldStylesheet/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css">
     <SCRIPT type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/F9A769DF-F758-B045-8B15-7B836D5190F2/main.js" charset="UTF-8"></SCRIPT>
    <!-- Following script tag holds a function not being used anymore -->
     <script> //testing this script, its supposed to access php file to get forums from database and display it on the page
