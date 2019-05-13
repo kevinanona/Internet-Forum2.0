@@ -7,7 +7,7 @@ include "header.php"; //file has the navigation bar to be included into every lo
  * Time: 5:31 PM
  */
 
-require_once "../database.php";
+require_once "database.php";
 
 if(isset($_GET['forumID'])){
     $f_id = $_GET['forumID']; //gets the value from the submitted form and sets it as f_id variable. Now I know the ID of the forum clicked and can use that info to display the forums comments

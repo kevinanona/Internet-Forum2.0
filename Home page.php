@@ -1,51 +1,34 @@
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
-<link rel="stylesheet" type="text/css" href="OldStylesheet/stylesheet.css">
-<SCRIPT type="text/javascript"src="https://gc.kis.v2.scr.kaspersky-labs.com/F9A769DF-F758-B045-8B15-7B836D5190F2/main.js" charset="UTF-8"></script>
-<SCRIPT>
-    /** These functions arent being used anymore
-function signup(){
-document.getElementById("signup").src = "/register.html";
-window.location.href = "../register.html";
-}
-function login(){
-document.getElementById("login").src = "login.html";
-}
-function subjectList(){
-document.getElementById("dropdown").classList.toggle("show");
-}
-function accountInfo(){ //dropdown account options menu
-}
-    */
-
-</SCRIPT>
+    <link rel="stylesheet" type="text/css" href="OldStylesheet/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css">
 <script> //testing this script, its supposed to access php file to get forums from database and display it on the page
         // Could use include "displayForums.php" instead of having to use AJAX but AJAX was used here instead for learning purposes
-          function displayForums() {
-            if (window.XMLHttpRequest) {
-                // code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp = new XMLHttpRequest();
-            } else {
-                // code for IE6, IE5
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.onreadystatechange = function() {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
-                }
-            };
-            xmlhttp.open("GET","displayForums.php",true);
-            xmlhttp.send();
-
-         }
+//          function displayForums() {
+//            if (window.XMLHttpRequest) {
+//                // code for IE7+, Firefox, Chrome, Opera, Safari
+//                xmlhttp = new XMLHttpRequest();
+//            } else {
+//                // code for IE6, IE5
+//                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+//            }
+//            xmlhttp.onreadystatechange = function() {
+//                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+//                    document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+//                }
+//            };
+//            xmlhttp.open("GET","displayForums.php",true);
+//            xmlhttp.send();
+//
+//         }
 </script>
 </HEAD>
 
 <BODY>
 <?php
 session_start();
-require_once "../database.php";
+require_once "database.php";
 // check if session exists?
 if(isset($_SESSION['username']) != 0){
 header("Location: Loggedin.php");
@@ -54,12 +37,13 @@ header("Location: Loggedin.php");
 <DIV class=topMenu>
 
 	<DIV id=registerAndLogin>
-	<button class=button onclick="window.location.href='register.html'">Sign Up</button>
-	<button class=button onclick="window.location.href='../Forum/login.html'">Log in</button>
+	<button class="btn-primary" onclick="window.location.href='register.html'">Sign Up</button>
+	<button class="btn-secondary" onclick="window.location.href='login.html'">Log in</button>
 	</DIV>
 	
 		<div id=searching>
-  <select id="searchOptions"
+            <form METHOD="get" ACTION="searchForum.php">
+  <select id="searchOptions" name="subjectTitle"
           onchange="document.getElementById('displayValue').value=this.options[this.selectedIndex].text; document.getElementById('idValue').value=this.options[this.selectedIndex].value;">
     <option value="CSC 105">CSC 105</option>
     <option value="CSC 110">CSC 110</option>
@@ -96,10 +80,7 @@ header("Location: Loggedin.php");
 	<option value="MAT214A">MAT214A</option>
 	<option value="PHS 205">PHS 205</option>
   </select>
-            <form METHOD="get" ACTION="searchForum.php">
-                <input class=searchField type="text" name="subjectTitle" id="displayValue"
-                       placeholder="Enter forum subject/tag" onfocus="this.value = this.select()">
-                <input id="idValue" type="submit">
+                <input class="btn-dark" id="idValue" type="submit">
             </form>
 </div>
 	
@@ -117,7 +98,9 @@ header("Location: Loggedin.php");
 </DIV>
 <DIV id=txtHint>
 </DIV>
-<SCRIPT>displayForums();//script that calls the function to display forums</SCRIPT>
+<?php
+include "displayForums.php";
+?>
 <SCRIPT>
 function sendMessage(){ //user is not logged in therefore it displays a message // Message feature was commented out because it was fully implemented, user has no way of viewing their inbox
 	alert("You need to be logged in to send a message");

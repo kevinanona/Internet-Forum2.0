@@ -4,7 +4,7 @@ session_start();
 
 <?php
 // Connects to database to be able to query the database
-require_once "../database.php";
+require_once "database.php";
 
 echo "<!DOCTYPE html>";
 echo "<HTML><BODY>";

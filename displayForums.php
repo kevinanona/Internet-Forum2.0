@@ -1,6 +1,6 @@
 
 <?php
-require_once "../database.php";
+require_once "database.php";
 
 $sql = '
 SELECT f_id, creator_username, f_title, f_text, s_title, tag 

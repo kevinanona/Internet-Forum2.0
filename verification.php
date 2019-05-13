@@ -2,7 +2,7 @@
 echo "<!DOCTYPE HTML>";
 echo "<HTML><BODY>";
 
-require_once "../database.php";
+require_once "database.php";
 //if(isset($_GET['userid']) && isset($_GET['validate'])){
 	$username = ($_GET['username']);
 	$verified = mysql_fix_string ($dbcon, ($_GET['verified']));

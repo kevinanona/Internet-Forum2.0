@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="OldStylesheet/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css">
 <Title>Log in</Title>
 </HEAD>
 <BODY>
@@ -72,8 +73,8 @@
 <DIV class=login>
 	<FORM METHOD=POST NAME="Login" ACTION="login.php"><TABLE align=center>
 	<H2><center>Log in</center></H2>
-		<TR><TD>Username</TD><TD><INPUT type="text" name=username required></TD></TR>
-		<TR><TD>Password</TD><TD><INPUT type="password" name=password required></TD></TR>
+		<TR><TD><label for="username">Username</label></TD><TD><INPUT class="form-control" type="text" id="username" name=username required></TD></TR>
+		<TR><TD><label for="password">Password</label></TD><TD><INPUT class="form-control" type="password" id="password" name=password required></TD></TR>
 		<TR><TD></TD><TD><INPUT type=submit name=submit value="Submit" required></TD></TR>
 	</TABLE></FORM>
 </DIV>

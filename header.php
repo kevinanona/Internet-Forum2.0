@@ -3,7 +3,7 @@
 <head>
     <title>Internet Forum</title>
     <!-- THIS PAGE IS TO BE INCLUDED INTO EVERY FILE THE USER IS GOING TO BE LOGGED IN FOR -->
-    <link rel="stylesheet" type="text/css" href="/OldStylesheet/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="OldStylesheet/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css">
     <SCRIPT type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/F9A769DF-F758-B045-8B15-7B836D5190F2/main.js" charset="UTF-8"></SCRIPT>
    <!-- Following script tag holds a function not being used anymore -->
@@ -73,22 +73,30 @@ session_start();
             <option value="MAT214A">MAT214A</option>
             <option value="PHS 205">PHS 205</option>
         </select>
-            <input class=searchField type="text" id="displayValue"
-                   placeholder="Enter forum subject">
-            <input type="submit" value="Search">
+            <input class="btn-dark" type="submit" id="Search" value="Search">
         </form>
     </div>
 
-    <DIV style="float: right; top: 0; right: 0;">
-        <!-- Navigation bar with links to Forum creation, message sending and logout options -->
-        <nav class=nav>
-            <ul>
-                <li><a href="./Home%20page.php">Home Page</a></li>
-                <li><a href="http://weblab.salemstate.edu/~csforum/Forum/createForum.html">Create Forum</a></li>
-               <!--  <li><a href="./messages.php">Send Message</a></li> The message sending class is not fully functional -->
-                <?php if(isset($_SESSION['username'])){ echo "<li><a href=\"./logout.php\">Logout</a></li>"; } ?>
-            </ul>
-        </nav>
-    </DIV>
+    <div class="btn-toolbar" style="float: right;top: 0;right: 0;">
+        <div class="btn-group">
+            <button class="btn-info">Create Forum</button>
+            <button class="btn-info">Send Message</button>
+            <?php if(isset($_SESSION['username'])){ echo "<button class=\"btn-info\">Logout</button>"; } ?>
+        </div>
+    </div>
+    <?php
+//JUST COMMENTED EVERYTHING TO TEST A DIFFERENT APPROACH
+//    <DIV style="float: right; top: 0; right: 0;">
+//        <!-- Navigation bar with links to Forum creation, message sending and logout options -->
+//        <nav class=nav>
+//            <ul>
+//                <li><a href="./Home%20page.php">Home Page</a></li>
+//                <li><a href="http://weblab.salemstate.edu/~csforum/Forum/createForum.html">Create Forum</a></li>
+//               <!--  <li><a href="./messages.php">Send Message</a></li> The message sending class is not fully functional -->
+//                <?php if(isset($_SESSION['username'])){ echo "<li><a href=\"./logout.php\">Logout</a></li>"; } //PHP CLOSE TAG WAS HERE
+//            </ul>
+//        </nav>
+//    </DIV>
+?>
 
 </DIV>

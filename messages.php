@@ -4,7 +4,8 @@ session_start();
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="OldStylesheet/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css">
 </HEAD>
 <BODY>
 <?php
@@ -19,7 +20,7 @@ include "header.php";
 
 <?php
 
-require_once "../database.php"; //connects to the database
+require_once "database.php"; //connects to the database
 if(isset($_POST['receiver']) && isset($_POST['message'])){ //makes sure values were received for both receiver and message
 
 $receiver = $_POST['receiver'];

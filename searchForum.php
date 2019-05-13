@@ -1,7 +1,7 @@
 
 <?php
 include 'header.php';
-require_once '../database.php';
+require_once 'database.php';
 if (isset($_GET['subjectTitle'])) {
         $s_title = $_GET['subjectTitle'];
         $sql = '

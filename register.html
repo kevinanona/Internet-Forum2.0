@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="OldStylesheet/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css">
 <Title>Register</Title>
 </HEAD>
 <BODY>
@@ -10,7 +11,7 @@
 
 	<DIV id=registerAndLogin>
 		<button class=button onclick="window.location.href='register.html'">Sign Up</button>
-		<button class=button onclick="window.location.href='../Forum/login.html'">Log in</button>
+		<button class=button onclick="window.location.href='login.html'">Log in</button>
 	</DIV>
 
 	<div id=searching>
@@ -72,12 +73,12 @@
 <DIV class=register>
 	<FORM id="myForm" METHOD=POST NAME="Register" ACTION="register.php"><TABLE align=center>
 	<H2><center>Register</center></H2>
-		<TR><TD>First Name</TD><TD><INPUT id=firstname type=text name=firstname required></TD></TR>
-		<TR><TD>Last Name</TD><TD><INPUT id=lastname type=text name=lastname required></TD></TR>
-		<TR><TD>Username</TD><TD><INPUT id=username type=text name=username required></TD></TR>
-		<TR><TD>Email</TD><TD><INPUT id=email type=email name=email required></TD></TR>
-		<TR><TD>Password</TD><TD><INPUT id=password type=password name=password required></TD></TR>
-		<TR><TD></TD><TD><INPUT id=submit type=submit name=submit value="Submit"></TD></TR>
+		<TR><TD><label for="firstname">First Name</label></TD><TD><INPUT class="form-control" id=firstname type=text name=firstname required></TD></TR>
+		<TR><TD><label for="lastname">Last Name</label></TD><TD><INPUT class="form-control" id=lastname type=text name=lastname required></TD></TR>
+		<TR><TD><label for="username">Username</label></TD><TD><INPUT class="form-control" id=username type=text name=username required></TD></TR>
+		<TR><TD><label for="email">Email</label></TD><TD><INPUT class="form-control" id=email type=email name=email required></TD></TR>
+		<TR><TD><label for="password">Password</label></TD><TD><INPUT class="form-control" id=password type=password name=password required></TD></TR>
+		<TR><TD></TD><TD><INPUT class="btn-block" id=submit type=submit name=submit value="Submit"></TD></TR>
 	</TABLE></FORM>
 </DIV>
 <?php

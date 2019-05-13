@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <?php
-require_once "../database.php";
+require_once "database.php";
 echo "<!DOCTYPE HTML>";
 echo "<HTML><BODY>";
 

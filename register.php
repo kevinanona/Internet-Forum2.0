@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
-<LINK rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="OldStylesheet/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css">
 <SCRIPT>
 	function redirectToLogin(){
 		window.location.href = "http://weblab.salemstate.edu/~csforum/Forum/login.html";
@@ -15,7 +16,7 @@
 
 <?php
 
-require_once "../database.php"; //connects to the database
+require_once "database.php"; //connects to the database
 if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password'])){
 //dbescape sanitizes every variables to prevent sql injections
 $firstname = $_POST['firstname'];

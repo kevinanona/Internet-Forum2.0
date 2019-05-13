@@ -23,8 +23,8 @@ h2 {
 }
 .topMenu{
 	width: 100%;
-	height: 50px;
-	background-color: #0000bf;
+	height: 80px;
+	background-color: #d29a7b;
 	position: relative;
 	text-align: center;
 	border: 10px solid transparent;
@@ -64,7 +64,7 @@ h2 {
 	left: 30%;
 }
 #searching{
-	width:200px;
+	width:280px;
 	height:25px;
 	border:0;
 	padding:0;
@@ -181,7 +181,7 @@ h2 {
 	
 }
 .innerSubjectAndTag{
-	height: 20px;
+	height: 30px;
 	width: 200px;
 	background-color: #cceeff;
 	//background: transparent; 
